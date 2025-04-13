@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tanmai's Diary</title>
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" height="68" width="68" alt="Tanmai's Diary Logo" />
+      <h1>Tanmai's Diary</h1>
+      <button>Share an entry</button>
+    </header>
+
+    <form>
+      <input type="text" placeholder="Write something memorable..." />
+      <span>200</span>
+      <input type="text" placeholder="Link to source (optional)..." />
+      <select>
+        <option value="">Choose category:</option>
+        <option value="personal">Personal</option>
+        <option value="travel">Travel</option>
+        <option value="projects">Projects</option>
+      </select>
+      <button>Post</button>
+    </form>
+
+    <main>
+      <aside>
+        <ul>
+          <li><button>All</button></li>
+          <li><button>Personal</button></li>
+          <li><button>Travel</button></li>
+        </ul>
+      </aside>
+
+      <section>
+        <ul>
+          <li>
+            <p>
+              Started working on my personal website using React and plain
+              HTML/CSS!
+              <a href="https://github.com/tanmaimukku" target="_blank"
+                >(Source)</a
+              >
+              <span>#projects#</span>
+            </p>
+            <div>
+              <button>👍 <strong>10</strong></button>
+              <button>🤯 <strong>3</strong></button>
+              <button>⛔️ <strong>0</strong></button>
+            </div>
+          </li>
+          <li>
+            <p>
+              Visited the Grand Canyon for the first time—absolutely
+              breathtaking.
+              <a href="https://www.nps.gov/grca/index.htm" target="_blank"
+                >(Source)</a
+              >
+              <span>#travel#</span>
+            </p>
+            <div>
+              <button>👍 <strong>15</strong></button>
+              <button>🤯 <strong>5</strong></button>
+              <button>⛔️ <strong>0</strong></button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
