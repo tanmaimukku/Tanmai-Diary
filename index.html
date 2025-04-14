@@ -4,71 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coiny&family=Sono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="style.css" rel="stylesheet" />
     <title>Tanmai's Diary</title>
   </head>
   <body>
-    <header>
-      <img src="logo.png" height="68" width="68" alt="Tanmai's Diary Logo" />
-      <h1>Tanmai's Diary</h1>
-      <button>Share an entry</button>
-    </header>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <img
+            src="logo.png"
+            height="68"
+            width="68"
+            alt="Tanmai's Diary Logo"
+          />
+          <h1>Tanmai's Diary</h1>
+        </div>
 
-    <form>
-      <input type="text" placeholder="Write something memorable..." />
-      <span>200</span>
-      <input type="text" placeholder="Link to source (optional)..." />
-      <select>
-        <option value="">Choose category:</option>
-        <option value="personal">Personal</option>
-        <option value="travel">Travel</option>
-        <option value="projects">Projects</option>
-      </select>
-      <button>Post</button>
-    </form>
+        <button class="btn btn-large btn-open">New Entry</button>
+      </header>
 
-    <main>
-      <aside>
-        <ul>
-          <li><button>All</button></li>
-          <li><button>Personal</button></li>
-          <li><button>Travel</button></li>
-        </ul>
-      </aside>
+      <form class="fact-form hidden">
+        <input type="text" placeholder="Write something memorable..." />
+        <span>200</span>
+        <input type="text" placeholder="Link to a source (optional)..." />
+        <select>
+          <option value="">Choose category:</option>
+          <option value="projects">Projects</option>
+          <option value="personal">Personal</option>
+          <option value="travel">Travel</option>
+        </select>
+        <button class="btn btn-large">Post</button>
+      </form>
 
-      <section>
-        <ul>
-          <li>
-            <p>
-              Started working on my personal website using React and plain
-              HTML/CSS!
-              <a href="https://github.com/tanmaimukku" target="_blank"
-                >(Source)</a
+      <main class="main">
+        <aside>
+          <ul>
+            <li class="category">
+              <button class="btn btn-all-categories">All</button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #ef4444"
               >
-              <span>#projects#</span>
-            </p>
-            <div>
-              <button>👍 <strong>10</strong></button>
-              <button>🤯 <strong>3</strong></button>
-              <button>⛔️ <strong>0</strong></button>
-            </div>
-          </li>
-          <li>
-            <p>
-              Visited the Grand Canyon for the first time—absolutely
-              breathtaking.
-              <a href="https://www.nps.gov/grca/index.htm" target="_blank"
-                >(Source)</a
+                Projects
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #3b82f6"
               >
-              <span>#travel#</span>
-            </p>
-            <div>
-              <button>👍 <strong>15</strong></button>
-              <button>🤯 <strong>5</strong></button>
-              <button>⛔️ <strong>0</strong></button>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
+                Personal
+              </button>
+            </li>
+          </ul>
+        </aside>
+
+        <section>
+          <ul class="facts-list"></ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
